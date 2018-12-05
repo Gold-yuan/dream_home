@@ -1,4 +1,3 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -121,7 +120,8 @@ class RandomWordsState extends State<RandomWords> {
                   appBar: new AppBar(
                     title: new Text(pair),
                   ),
-                  body: Image.asset("img/a"+_suggestions.indexOf(pair).toString()+".jpg"),
+                  body: Image.asset(
+                      "img/a" + _suggestions.indexOf(pair).toString() + ".jpg"),
                 );
               },
             ),
