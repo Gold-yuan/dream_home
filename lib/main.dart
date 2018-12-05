@@ -99,9 +99,15 @@ class RandomWordsState extends State<RandomWords> {
     final alreadySaved = _saved.contains(pair);
 
     return new ListTile(
-      title: new Text(
-        pair,
-        style: alreadySaved ? _biggerFontGreen : _biggerFont,
+      title: new Container(
+        // grey box
+        child: new Text(
+          pair,
+          style: new TextStyle(
+            fontSize: 18.0,
+          ),
+        ),
+        color: alreadySaved ? Colors.green : Colors.white,
       ),
       leading: new Icon(
         Icons.assignment_turned_in,
