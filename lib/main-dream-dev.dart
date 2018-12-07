@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:dream_home/dream/drawer.dart';
 
 /// https://flutterchina.club/get-started/codelab/#第1步-创建-flutter-app
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
           child: new RandomWords(),
         ),
       ),
+
     );
   }
 }
@@ -86,8 +88,11 @@ class RandomWordsState extends State<RandomWords> {
       appBar: new AppBar(
         title: new Text('dream list'),
         actions: <Widget>[
-          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+          new IconButton(icon: new Icon(Icons.keyboard_arrow_right), onPressed: _pushSaved),
         ],
+      ),
+      drawer: new Drawer(
+        child: new DrawerPage(),
       ),
       body: _buildSuggestions(),
       floatingActionButton: FloatingActionButton(
